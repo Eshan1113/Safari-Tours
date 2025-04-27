@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilderness Explorers - Safari Tours</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-green-600 flex items-center">
+                        <i class="fas fa-tree mr-2"></i>
+                        Wilderness Explorers
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="home">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="about">About Us</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="services">Services</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="gallery">Gallery</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="testimonials">Review</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="contact">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-green-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="mobile-nav fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 p-4">
+        <div class="flex justify-between items-center mb-8">
+            <span class="text-xl font-bold text-green-600">Wilderness</span>
+            <button id="close-mobile-menu" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-4">
+            <a href="#home" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="home">Home</a>
+            <a href="#about" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="about">About Us</a>
+            <a href="#services" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="services">Services</a>
+            <a href="#gallery" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="gallery">Gallery</a>
+            <a href="#testimonials" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="testimonials">Review</a>
+            <a href="#contact" class="mobile-nav-link text-gray-700 hover:text-green-600 transition duration-300" data-section="contact">Contact</a>
+        </div>
+        <div class="mt-8 pt-8 border-t">
+            <div class="flex items-center justify-center space-x-4">
+                <a href="#" class="text-gray-500 hover:text-green-600">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-green-600">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-green-600">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="relative h-screen">
+            <div class="slider-container h-full">
+                <div class="slider-item absolute inset-0 fade-in">
+                    <img src="img/main.jpg" alt="Safari Hero" class="w-full h-full object-cover">
+                    <div class="safari-overlay absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 animate__animated animate__fadeIn">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">Discover the Wild</h1>
+                            <p class="text-xl md:text-2xl mb-8">Experience Africa's Majesty with Expert Guides</p>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg transition duration-300 animate__animated animate__fadeInUp">
+                                Explore Tours
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
+                <span class="h-2 w-2 rounded-full bg-white opacity-50"></span>
+                <span class="h-2 w-2 rounded-full bg-white opacity-100"></span>
+                <span class="h-2 w-2 rounded-full bg-white opacity-50"></span>
+            </div>
+        </div>
+        
+        <!-- Quick Info Cards -->
+        <div class="relative z-10 mx-auto max-w-7xl px-4 -mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center transform hover:scale-105 transition duration-300">
+                    <div class="rounded-full bg-green-100 p-4 mr-4">
+                        <i class="fas fa-compass text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Expert Guides</h3>
+                        <p class="text-gray-600 text-sm">Professional safari guides with years of experience</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center transform hover:scale-105 transition duration-300">
+                    <div class="rounded-full bg-green-100 p-4 mr-4">
+                        <i class="fas fa-map-marked-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Premium Locations</h3>
+                        <p class="text-gray-600 text-sm">Access to exclusive wildlife viewing areas</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center transform hover:scale-105 transition duration-300">
+                    <div class="rounded-full bg-green-100 p-4 mr-4">
+                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Safety First</h3>
+                        <p class="text-gray-600 text-sm">Your safety is our top priority on every expedition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-medium">Learn About Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Safari Company</h2>
+                <div class="h-1 w-20 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-gray-600">
+                        For over 15 years, Wilderness Explorers has provided unforgettable safari experiences across 
+                        East Africa. Our team of professional guides and wildlife experts is dedicated to delivering 
+                        authentic, sustainable safari adventures.
+                    </p>
+                    <p class="text-gray-600">
+                        What sets us apart is our commitment to conservation and community development. We believe 
+                        that sustainable tourism can help protect wildlife while supporting local communities.
+                    </p>
+                    <div class="bg-green-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">Our Mission</h3>
+                        <p class="text-gray-600">
+                            To create meaningful connections between people and nature through responsible tourism 
+                            and conservation-focused safaris.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <span class="counter-value text-3xl font-bold text-green-600">15</span>
+                            <p class="text-gray-600 text-sm">Years Experience</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <span class="counter-value text-3xl font-bold text-green-600">1000</span>
+                            <p class="text-gray-600 text-sm">Happy Clients</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <span class="counter-value text-3xl font-bold text-green-600">20</span>
+                            <p class="text-gray-600 text-sm">Expert Guides</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <span class="counter-value text-3xl font-bold text-green-600">50</span>
+                            <p class="text-gray-600 text-sm">Safari Routes</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/about.png" alt="Safari Team" class="rounded-lg shadow-lg">
+            </div>
+            
+            <div class="mt-20">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-green-600 text-3xl mb-4">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Sustainable Tourism</h3>
+                        <p class="text-gray-600">
+                            Our safaris are designed to minimize environmental impact while maximizing your experience.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-green-600 text-3xl mb-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Community Support</h3>
+                        <p class="text-gray-600">
+                            We partner with local communities to ensure economic benefits stay in the region.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-green-600 text-3xl mb-4">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Wildlife Conservation</h3>
+                        <p class="text-gray-600">
+                            A portion of every safari booking goes directly to conservation projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-gray-100 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-medium">What We Offer</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Safari Packages</h2>
+                <div class="h-1 w-20 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="tour-filter-btn px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:text-green-700 active-filter" data-filter="all">
+                        All Tours
+                    </button>
+                    <button type="button" class="tour-filter-btn px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:text-green-700" data-filter="family">
+                        Family Friendly
+                    </button>
+                    <button type="button" class="tour-filter-btn px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 focus:z-10 focus:text-green-700" data-filter="luxury">
+                        Luxury
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="tour-card bg-white rounded-lg shadow-md overflow-hidden" data-category="family">
+                    <div class="relative">
+                        <img src="img/pack1.png" alt="Classic Safari" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-md text-sm font-medium">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Classic Safari</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(48 reviews)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">5-day guided tour through Kenya's premier national parks</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-green-600">$1,499<span class="text-sm">/person</span></p>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tour-card bg-white rounded-lg shadow-md overflow-hidden" data-category="luxury">
+                    <div class="relative">
+                        <img src="img/pack2.png" alt="Luxury Safari" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 m-2 rounded-md text-sm font-medium">
+                            Luxury
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Premium Safari</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(36 reviews)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">7-day luxury safari with private guide and premium accommodations</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-green-600">$3,299<span class="text-sm">/person</span></p>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tour-card bg-white rounded-lg shadow-md overflow-hidden" data-category="family">
+                    <div class="relative">
+                        <img src="img/pack3.png" alt="Family Safari" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 m-2 rounded-md text-sm font-medium">
+                            Family
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Family Adventure</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(29 reviews)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">4-day family-friendly safari with educational activities for kids</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-green-600">$1,299<span class="text-sm">/person</span></p>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="inline-flex items-center bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition duration-300 px-6 py-3 rounded-lg font-medium">
+                    View All Packages
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-medium">Our Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Safari Gallery</h2>
+                <div class="h-1 w-20 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g1.jpg" alt="Safari Gallery 1" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64 col-span-2">
+                    <img src="img/g2.jpg" alt="Safari Gallery 2" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g3.jpg" alt="Safari Gallery 3" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g4.jpg" alt="Safari Gallery 4" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g5.jpg" alt="Safari Gallery 5" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g6.jpg" alt="Safari Gallery 6" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g7.jpg" alt="Safari Gallery 4" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64 col-span-2">
+                    <img src="img/g6.jpg" alt="Safari Gallery 7" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g5.jpg" alt="Safari Gallery 4" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+                    <img src="img/g1.jpg" alt="Safari Gallery 4" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-gray-100 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-medium">Happy Customers</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">What Clients Say</h2>
+                <div class="h-1 w-20 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="img/r1.jpg" alt="Testimonial Author" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">New York, USA</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "The guides were incredibly knowledgeable and spotted animals that we would have missed. The accommodations were comfortable and the food was excellent. Will definitely book again!"
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="img/r3.jpg" alt="Testimonial Author" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Kamal Jayasinha</h4>
+                            <p class="text-gray-600 text-sm">Matale Sri Lankan</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "Couldn't have asked for a better experience. We saw all of the Big Five and our guide was fantastic. The sustainable approach to tourism made us feel good about our choice."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="img/r2.jpg" alt="Testimonial Author" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Kasun Madusanka</h4>
+                            <p class="text-gray-600 text-sm">Kandy Sri lankan</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">
+                        "The family safari was perfect for our kids. They learned so much about conservation while having fun. The educational activities were engaging and the staff was amazing with children."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-medium">Get In Touch</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Contact Us</h2>
+                <div class="h-1 w-20 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="+1 234 567 890">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent h-32" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Kandy Sri Lankan</p>
+                                    <p class="text-gray-600">P.O Box 12345-00100</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">+94 778519383</p>
+                                    <p class="text-gray-600">Mon-Fri, 8am-5pm</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">info@wilderness.com</p>
+                                    <p class="text-gray-600">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-96 rounded-lg overflow-hidden shadow-md">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454928.12375056307!2d81.01027781689197!3d6.816764349517972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5d3a62ffb9359%3A0x3bb623d70b5a3314!2sYala%20National%20Park!5e1!3m2!1sen!2slk!4v1745747998713!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <br>
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Wilderness Explorers</h4>
+                    <p class="text-gray-400">Creating unforgettable safari experiences since 2008.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-green-500 transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="hover:text-green-500 transition duration-300">Tours</a></li>
+                        <li><a href="#gallery" class="hover:text-green-500 transition duration-300">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-green-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">FAQs</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Wilderness Explorers(Eshan Dananjaya). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Navigation Handling
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.dataset.section;
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter-value');
+        const animationDuration = 2000;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = parseInt(counter.innerText);
+                let start = 0;
+                const increment = target / (animationDuration / 10);
+                
+                const updateCounter = () => {
+                    start += increment;
+                    if(start < target) {
+                        counter.innerText = Math.ceil(start);
+                        setTimeout(updateCounter, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Intersection Observer for counter animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.getElementById('about'));
+
+        // Tour Filtering
+        const filterButtons = document.querySelectorAll('.tour-filter-btn');
+        const tourCards = document.querySelectorAll('.tour-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                
+                filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                button.classList.add('active-filter');
+                
+                tourCards.forEach(card => {
+                    if(filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
